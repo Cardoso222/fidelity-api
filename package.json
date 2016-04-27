@@ -1,0 +1,20 @@
+{
+  "name": "fidelity-api",
+  "version": "1.0.0",
+  "description": "API for fidelity mobile app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "fidelity"
+  ],
+  "author": "Paulo Cardoso",
+  "license": "ISC",
+  "dependencies": {
+    "express-session": "^1.13.0",
+    "nodemon": "^1.9.1",
+    "sequelize": "^3.22.0"
+  }
+}
