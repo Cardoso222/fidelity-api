@@ -47,6 +47,19 @@ User.findOne({
   })
 });
 
+//Update user points
+app.post('/users/:cpf', function(req, res) {
+  var data = req.body;
+  if(data.points.length <= 0) return res.status(500).json({error: 'You need to pass the points'});
+  User.findAll({
+  where: {cpf: parseInt(req.params.cpf)}
+  }).then(function(users) {
+    users[0].updateAttributes({points: parseInt(users[0].dataValues.points + req.body.points)});
+      return res.status(200).json({success: true, user: users[0]});
+    });
+});
+
+
 app.listen(3000, function() {
   console.log('Server running on port: ' + 3000);
 });
