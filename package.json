@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "express-session": "^1.13.0",
+    "mongoose": "^4.4.14",
     "nodemon": "^1.9.1",
     "sequelize": "^3.22.0"
   }
