@@ -28,7 +28,7 @@ var Shop = sequelize.define('shop', {
 
 //middleware
 app.use(function(req, res, next) {
-  if(req.headers.token != 'UGF1bG8gQ2FyZG9zbwo=') return res.status(500).json({error: "You dont have permission"});
+ // if(req.headers.token != 'UGF1bG8gQ2FyZG9zbwo=') return res.status(500).json({error: "You dont have permission"});
   next();
 });
 
