@@ -25,6 +25,7 @@ var Shop = sequelize.define('shop', {
   lng: Sequelize.STRING
 });
 
+sequelize.sync({ force: true });
 
 //middleware
 app.use(function(req, res, next) {
